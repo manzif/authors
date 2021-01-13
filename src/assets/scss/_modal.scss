@@ -1,0 +1,35 @@
+.modal {
+  position: absolute;
+  background-color: color(light);
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  color: color(textDark);
+  border-radius: 8px;
+
+  @include phone {
+    width: 300px;
+  }
+
+  .title {
+    padding: 20px;
+    background-color: #e4ebf1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .body {
+    padding: 20px;
+    border-bottom: 2px solid #e4ebf1;
+    height: 120px;
+  }
+
+  .actions {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

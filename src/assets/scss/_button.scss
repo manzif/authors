@@ -1,0 +1,86 @@
+.btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  @include small_phone {
+    padding: 6px 12px;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.btn-primary {
+  background-color: color(primary);
+  color: color(light);
+}
+
+.btn-secondary {
+  background-color: color(secondary);
+  color: color(light);
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: color(light);
+}
+
+.btn-google {
+  background-color: #dd4b39;
+  color: color(light);
+}
+
+.btn-light-gray {
+  background-color: #e4ebf1;
+}
+
+.btn-danger {
+  background-color: color(danger);
+  color: color(light);
+}
+
+.btn-follow {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: color(light);
+  outline: none;
+  border: 1px solid color(primary);
+  color: color(primary);
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &.following {
+    background-color: color(primary);
+    color: color(light);
+  }
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
+    border: none;
+  }
+}

@@ -1,0 +1,268 @@
+.galleryContainer {
+  width: 100%;
+  height: 500px;
+  user-select: none;
+  box-shadow: 0px 0px 3px 1px #00000078;
+  padding-bottom: 10px;
+  background-color: color(primary);
+
+  @include phone {
+    height: 230px;
+  }
+
+  .slideShowContainer {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+
+    .imageHolder {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .captionText {
+        display: none;
+      }
+    }
+    .leftArrow,
+    .rightArrow {
+      width: 50px;
+      background: #00000036;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      transition: background 0.5s;
+      height: 72px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      @include phone {
+        width: 30px;
+        height: 52px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: #000000a8;
+      }
+
+      .arrow {
+        display: inline-block;
+        border: 3px solid color(light);
+        width: 10px;
+        height: 10px;
+        border-left: none;
+        border-bottom: none;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .arrowLeft {
+        transform: rotateZ(-135deg);
+      }
+
+      .arrowRight {
+        transform: rotateZ(45deg);
+      }
+    }
+
+    .rightArrow {
+      left: auto;
+      right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    > .captionHolder {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      text-align: center;
+      width: 100%;
+      background: #00000047;
+      height: 50px;
+      line-height: 50px;
+      overflow: hidden;
+
+      @include phone {
+        height: 40px;
+        line-height: 40px;
+      }
+
+      a {
+        color: color(light);
+        font-size: 16px;
+        text-decoration: none;
+        font-family: sans-serif;
+
+        @include phone {
+          font-size: 12px;
+        }
+
+        &:hover {
+          color: color(secondary);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  #dotsContainer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+
+    @include phone {
+      padding-top: 7px;
+    }
+
+    .dots {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      margin-left: 10px;
+      background-color: color(secondary);
+      cursor: pointer;
+      transition: background-color 0.5s;
+
+      @include phone {
+        width: 10px;
+        height: 10px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover,
+      &.active {
+        background-color: #717171;
+      }
+    }
+  }
+
+  .moveLeftCurrentSlide {
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .moveLeftNextSlide {
+    animation-name: moveLeftNext;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .moveRightCurrentSlide {
+    animation-name: moveRightCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .moveRightNextSlide {
+    animation-name: moveRightNext;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .slideTextFromBottom {
+    animation-name: slideTextFromBottom;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+  }
+
+  .slideTextFromTop {
+    animation-name: slideTextFromTop;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes moveLeftCurrent {
+  from {
+    margin-left: 0;
+    opacity: 1;
+  }
+  to {
+    margin-left: -100%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeftNext {
+  from {
+    margin-left: 100%;
+    opacity: 1;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveRightCurrent {
+  from {
+    margin-left: 0;
+    opacity: 1;
+  }
+  to {
+    margin-left: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveRightNext {
+  from {
+    margin-left: -100%;
+    opacity: 1;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideTextFromBottom {
+  from {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes slideTextFromTop {
+  from {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

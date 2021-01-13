@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'button';
+@import 'modal';
+
+@import 'header';
+@import 'navbar';
+@import 'footer';
+
+@import 'home';
+@import 'auth';
+@import 'profile';
+@import 'article';
+@import 'comment';
+@import 'errors';
+@import 'search';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+  min-height: 100%;
+  background-color: color(accent);
+
+  .alert {
+    margin: 20px 0;
+  }
+
+  .container {
+    padding: 40px 100px;
+
+    @include tablet {
+      padding: 40px 40px;
+    }
+
+    @include phone {
+      padding: 20px 20px;
+    }
+  }
+
+  .loader {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .no-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      color: color(textDark);
+    }
+  }
+}

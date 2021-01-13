@@ -1,0 +1,74 @@
+{
+  "name": "authors_heaven_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "yarn": "1.22.4",
+    "node": "12.16.3"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.51",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@tinymce/tinymce-react": "^3.6.0",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "html-react-parser": "^0.10.5",
+    "moment": "^2.26.0",
+    "node-sass": "^4.13.1",
+    "prismjs": "^1.20.0",
+    "query-string": "^6.13.1",
+    "react": "^16.13.1",
+    "react-avatar-editor": "^11.0.9",
+    "react-dom": "^16.13.1",
+    "react-facebook-login": "^4.1.1",
+    "react-file-reader": "^1.1.4",
+    "react-google-login": "^5.1.10",
+    "react-read-more-read-less": "^1.0.7",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-to-string": "^0.1.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --verbose --coverage --watchAll=false",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "moxios": "^0.4.0",
+    "prettier": "^2.0.4",
+    "redux-mock-store": "^1.5.4"
+  }
+}

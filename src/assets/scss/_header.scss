@@ -1,0 +1,120 @@
+.header {
+  background-color: color(primary);
+  padding: 20px 100px;
+  display: flex;
+  width: 100%;
+
+  @include tablet {
+    padding: 20px 60px;
+  }
+
+  @include nexus_tablet {
+    flex-direction: column;
+  }
+
+  @include phone {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .social-media {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    @include nexus_tablet {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    @include phone {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      display: inline-block;
+      margin-right: 50px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: color(light);
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+      @include tablet {
+        margin-right: 40px;
+      }
+
+      @include phone {
+        margin-right: 0;
+      }
+
+      @include small_phone {
+        width: 30px;
+        height: 30px;
+      }
+
+      a {
+        color: color(primary);
+        font-size: 22px;
+
+        @include small_phone {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .instagram-icon,
+    .twitter-icon {
+      @include medium_phone {
+        margin-right: 30px;
+      }
+      @include phone {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .search {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    @include nexus_tablet {
+      justify-content: center;
+    }
+
+    @include phone {
+      justify-content: center;
+    }
+
+    .input-field {
+      padding: 8px 12px;
+      outline: none;
+      border: 1px solid color(light);
+      border-radius: 4px;
+      margin-right: 7px;
+      width: 250px;
+      font-size: 13px;
+
+      @include tablet {
+        width: 220px;
+      }
+
+      @include phone {
+        width: 200px;
+      }
+
+      @include small_phone {
+        width: 180px;
+        padding: 8px 12px;
+      }
+    }
+  }
+}
